@@ -1,0 +1,166 @@
+
+//INSERT EGRESO
+
+CREATE TABLE egreso(
+                    Certificado TEXT(2100), TipoC VARCHAR(255), LugarE VARCHAR(255),
+                    MetodoPago VARCHAR(255), Subtotal INT, Total INT,
+                    Moneda VARCHAR(255), NoCertificado VARCHAR(255),
+                    FormaPago VARCHAR(255), version DECIMAL(2,1), Sello TEXT(400), Fecha VARCHAR(20),
+                    RFCemisor VARCHAR(13), NombreE VARCHAR(255), RegFiscalE VARCHAR(255),
+                    RFCreceptor VARCHAR(13), NombreR VARCHAR(255), UsoCFDI VARCHAR(255),
+                    ClaveProductoS INT(20), Cantidad INT(20), ClaveUnidad INT(20),
+                    Descripcion VARCHAR(255),  ValorUnitario DECIMAL(12,2), Importe DECIMAL(12,2),
+                    Base DECIMAL(12,2), Impuesto VARCHAR(255), TipoFactor VARCHAR(255),
+                    TasaOCuota DECIMAL(12,2), ImporteTras DECIMAL(12,2), TotalImpT DECIMAL(12,2),
+                    ImpuestoT DECIMAL(12,2), TipoFactorT VARCHAR(255), TasaOcuotaT DECIMAL(12,2),
+                    ImporteT DECIMAL(12,2), VersionTimbre DECIMAL(2,1), UUID VARCHAR(255),
+                    FechaTimbrado VARCHAR(20), RfcProveedorCert VARCHAR(13), SelloCFD TEXT(400),
+                    SelloSAT TEXT(400), numcertSAT VARCHAR(255), calleEmisor VARCHAR(255),
+                    numEmisor VARCHAR(255), edoEmisor VARCHAR(255), cpEmisor VARCHAR(255)
+                    );
+
+
+INSERT INTO egreso (Certificado,TipoC,LugarExp,MetodoPago,Subtotal,Total,Moneda,NoCertificado,FormaPago,
+Version, Sello, Fecha, RFCemisor,NombreE,RegFiscalE, RFCreceptor, NombreR, UsoCFDI, , ClaveProductoS, Cantidad,
+ClaveUnidad, Descripcion, ValorUnitario, Importe, Base, Impuesto, TipoFactor, TasaOCuota, ImporteTras,
+, TotalImpT, ImpuestoT, TipoFactorT, TasaOCuotaT, ImporteT,  VersionTimbre, UUID, FechaTimbrado,
+RfcProveedorCert, SelloCFD, SelloSAT, NumcertSAT, CalleEmisor, NumEmisor, EdoEmisor, CpEmisor)
+
+VALUES("$Certificado","$TipoC","$LugarExp","$MetodoPago","$Subtotal",$Total","$Moneda","$NoCertificado",
+"$FormaPago","$Version","$Sello","$FechaC"
+"$RFCemisor","$Nombremisor","$RegFiscal","$Rfcreceptor']",
+"$Nombrereceptor","$usoCfdi","$ClavePS","$Cantidad",
+"$ClaveUnidad","$Descripcion","$ValorUnitario", "$Importe",
+"$Base","$Impuesto", "$TipoFactor",
+"$TasaOcuota", "$'Importe",
+"$TotalImpuestos", "$varImpuestoT", "$TipoF", "$TasaCuota",
+"$ImporteT']", "$VersionTfd", "$UuidTfd", "$FechaTimbrado", "$RfcProveedor",
+"$SelloCFD", "$SelloSAT", "$NoCertSAT",
+"$CalleE", "$NumE", "$EdoE",
+"$CpE");
+
+CREATE TABLE ingreso (Certificado TEXT(2100), TipoC VARCHAR(255), NoCertificado VARCHAR(255),
+                    LugarE VARCHAR(255), Serie VARCHAR(255), Folio INT(20),
+                    SubTotal DECIMAL(5,2), Total DECIMAL(5,2), Moneda VARCHAR(255),
+                    MetodoPago VARCHAR(255), FormaPago VARCHAR(255), TipoCambio INT(20),
+                    Sello TEXT(400), RFCemisor VARCHAR(13), NombreE VARCHAR(255),
+                    RegFiscalE VARCHAR(255), RFCreceptor VARCHAR(13), NombreR VARCHAR(255),
+                    UsoCFDI VARCHAR(255), Cantidad INT(20), ClaveProductoS INT(20),
+                    ClaveUnidad INT(20), Descripcion VARCHAR(255), Importe INT(20),
+                    NumIdentificacion INT(20), Unidad INT(20), ValorUnitario DECIMAL(12,2),
+                    Base DECIMAL(5,2), ImporteI DECIMAL(12,2), Impuesto VARCHAR(255),
+                    TasaOCuota DECIMAL(12,2), TipoFactor VARCHAR(255), TotalImpuestos DECIMAL(12,2),
+                    ImporteT DECIMAL(5,2), ImpuestoT DECIMAL(5,2), TasaOCuotaT DECIMAL(12,2),
+                    TipoFactorT VARCHAR(255), VersionTimbre DECIMAL(2,1), UUID VARCHAR(255),
+                    FechaTimbrado VARCHAR(20), RfcProvCertif VARCHAR(13), SelloCFD TEXT(400),
+                    SelloSAT TEXT(400), numcertSAT VARCHAR(255), calleEmisor VARCHAR(255),
+                    numEmisor VARCHAR(255), edoEmisor VARCHAR(255), cpEmisor VARCHAR(255)
+                    );
+
+INSERT INTO ingreso(Certificado,TipoC, NoCertificado, LugarE, Serie, Folio, Subtotal, Total,
+Moneda, MetodoPago, FormaPago, TipoCambio, Sello, RFCemisor, NombreE, RegFiscalE, RFCreceptor, NombreR,
+UsoCFDI, Cantidad, ClaveProductoS, ClaveUnidad, Descripcion, Importe, NumIdentificacion,
+Unidad, ValorUnitario, Base, ImporteI, Impuesto, TasaOCuota, TipoFactor, TotalImpuestos, ImporteT, ImpuestoT,
+TasaOcuotaT, TipoFactorT, VersionTimbre, UUID, FechaTimbrado, RFCproveedor, SelloCFD, SelloSAT,
+numcertSAT, calleEmisor, numEmisor, edoEmisor, cpEmisor)
+
+VALUES("$Certificado", "$TipoC", "$NoCertificado","$LugarExp", "$Serie","$Folio",
+"$Subtotal", "$Total", "$Moneda","$MetodoPago", "$FormaPago", "$TipoCambio", "$Sello",
+"$RfcEmisor", "$Nombremisor", "$RegFiscal", "$Rfcreceptor", "$Nombrereceptor",
+"$usoCfdi", "$Cantidad", "$ClavePS", "$ClaveUnidad", "$Descripcion",
+"$Importe", "$NoIdentificacion", "$Unidad", "$ValorUnitario", "$Base",
+"$ImporteI", "$Impuesto", "$TasaOCuota", "$TipoFactor", "$TotalImpuestos",
+"$ImporteImp", "$ImpuestoImp", "$TasaCuota", "$TipoF", "$VersionTfd", "$UuidTfd",
+"$FechaTimbrado", "$RfcProveedor", "$SelloCFD","$SelloSAT", "$NoCertSAT",
+"$CalleE", "$NumE", "$EdoE","$CpE")
+
+
+CREATE TABLE nomina(Fecha VARCHAR(20), Sello TEXT(400), FormaPago VARCHAR(255),
+                    TipoC VARCHAR(255), LugarE VARCHAR(255), SubTotal DECIMAL(5,2),
+                    Total DECIMAL(5,2), NoCertificado VARCHAR(255), Certificado TEXT(2100),
+                    Serie VARCHAR(255), Folio INT(20), Moneda VARCHAR(255),
+                    MetodoPago VARCHAR(255), Descuento DECIMAL(12,2), RegFiscalE VARCHAR(255),
+                    RFCemisor VARCHAR(13), NombreE VARCHAR(255), RFCreceptor VARCHAR(13),
+                    NombreR VARCHAR(255), UsoCFDI VARCHAR(255), ClaveProductoS INT(20),
+                    CANTIDAD INT(20), ClaveUnidad INT(20), Descripcion VARCHAR(255),
+                    ValorUnitario DECIMAL(12,2), Importe DECIMAL(12,2), DescuentoN DECIMAL(12,2),
+                    Version DECIMAL(2,1), TipoNomina VARCHAR(255), FechaPago DATETIME,
+                    FechaInicialPago DATETIME, FechaFinalPago DATETIME, NumDiasPagados INT(20),
+                    TotalPercepciones DECIMAL(12,2), TotalDeducciones DECIMAL(12,2), TotalOtroPagos DECIMAL(12,2),
+                    CURPemisor VARCHAR(13), RegistroPatronal VARCHAR(255), Regimen VARCHAR(255),
+                    CURPreceptor VARCHAR(13), NumSeguridadSocial INT(20), FechaInicioRelacion DATETIME,
+                    Antiguedad VARCHAR(255), TipoDeContrato VARCHAR(255), Sindicalizado VARCHAR(4),
+                    TipoJornada VARCHAR(255), NumEmpleado INT(20), Departamento VARCHAR(255),
+                    Puesto VARCHAR(255), RiesgoPuesto VARCHAR(255), PeriocidadPago VARCHAR(255),
+                    SalarioBaseCotAportacion DECIMAL(12,2), ClaveEntidadFed INT(20), TotalGravado DECIMAL(12,2),
+                    TotalExento DECIMAL(12,2), TotalSueldos DECIMAL(12,2), TipoPercepcion INT(20),
+                    Clave INT(20), Concepto VARCHAR(255), ImporteGravado DECIMAL(12,2),
+                    ImporteExento DECIMAL(12,2), TotalOtrasDeducciones DECIMAL(12,2), UUID VARCHAR(255),
+                    FechaTimbrado DATETIME);
+
+INSERT INTO nomina (Fecha, Sello, FormaPago, TipoC, LugarE, Subtotal, Total, NoCertificado, Certificado,
+Serie, Folio, Moneda, MetodoPago, Descuento, RegFiscalE, RFCemisor, NombreE, RFCreceptor, NombreR,
+UsoCFDI, ClaveProductoS, Cantidad, ClaveUnidad, Descripcion, ValorUnitario, Importe, DescuentoN,
+Version, TipoNomina, FechaPago, FechaInicialPago, FechaFinalPago, NumDiasPagados,TotalPercepciones, TotalDeducciones,
+TotalOtroPagos, CURPemisor, RegistroPatronal, Regimen, CURPreceptor, NumSeguridadSocial, FechaInicioRelacion,
+Antiguedad, TipoDeContrato, Sindicalizado, TipoJornada, NumEmpleado, Departamento, Puesto, RiesgoPuesto, PeriocidadPago,
+SalarioBaseCotAportacion, ClaveEntidadFed, TotalGravado, TotalExento, TotalSueldos, TipoPercepcion, Clave, Concepto,
+ImporteGravado, ImporteExento, TotalOtrasDeducciones, UUID, FechaTimbrado)
+
+VALUES("$FechaC", "$Sello", "$FormaPago", "$TipoC",
+"$LugarExp", "$Subtotal", "$Total",
+"$NoCertificado", "$Certificado", "$Serie",
+"$Folio", "$Moneda","$MetodoPago", "$Descuento",
+"$RegFiscal", "$RFCemisor","$Nombremisor", "$Rfcreceptor","$Nombrereceptor",
+"$usoCfdi", "$ClavePS", "$Cantidad","$ClaveUnidad",
+"$Descripcion", "$ValorUnitario", "$ImporteN", "$DescuentoN",
+"$VersionN", "$TipoNomina", "$nomina['FechaPago']", "$nomina['FechaInicialPago']", "$nomina['FechaFinalPago']",
+"$nomina['NumDiasPagados']", "$nomina['TotalPercepciones']", "$nomina['TotalDeducciones']","$nomina['TotalOtroPagos']",
+"$nominaEmisor['Curp']", "$nominaEmisor['RegistroPatronal']", "$Regimen", "$nominaReceptor['Curp']",
+"$nominaReceptor['NumSeguridadSocial']","$nominaReceptor['FechaInicioRelLaboral']", "$nominaReceptor['Antigüedad']",
+"$TipoContrato", "$nominaReceptor['Sindicalizado']","$TipoJornada", "$nominaReceptor['NumEmpleado']",
+"$nominaReceptor['Departamento']", "$nominaReceptor['Puesto']","$RiesgoPuesto", "$PeriocidadPago",
+"$nominaReceptor['SalarioBaseCotApor']", "$nominaReceptor['SalarioDiarioIntegrado']",
+"$nominaReceptor['ClaveEntFed']", "$nominaPercepcion['TotalGravado']", "$nominaPercepcion['TotalExento']",
+"$nominaPercepcion['TotalSueldos']", "$nomPercepcion['TipoPercepcion']","$nomPercepcion['Clave']",
+"$nomPercepcion['Concepto']","$nomPercepcion['ImporteGravado']","$nomPercepcion['ImporteExento']",
+"$nominaDeducciones['TotalOtrasDeducciones']","$tfdTimbre['UUID']", "$tfdTimbre['FechaTimbrado']")
+
+CREATE TABLE pago(TipoC VARCHAR(255), FechaEmision DATETIME, Folio INT(10),
+                  Moneda VARCHAR(255), Total DECIMAL(12,2), LugarExpedicion VARCHAR(255),
+                  Sello TEXT(400), NoCertificado VARCHAR(255), Certificado TEXT(2100),
+                  RFCemisor VARCHAR(13), NombreE VARCHAR(255), RegFiscalE VARCHAR(255),
+                  RFCreceptor VARCHAR(13), NombreR VARCHAR(255), UsoCFDI VARCHAR(255),
+                  ClaveProductoS INT(20), Cantidad INT(20), ClaveUnidad INT(20),
+                  Descripcion VARCHAR(255), ValorUnitario DECIMAL(12,2), Importe INT(20),
+                  Xmlns VARCHAR(255), Version DECIMAL(2,1), Localizacion VARCHAR(255),
+                  FechaPago DATETIME, FormaPago VARCHAR(255), MonedaPago VARCHAR(255),
+                  Monto DECIMAL(12,2), NumOperacion INT(20), RfcEmisorCtaBen VARCHAR(13),
+                  CtaBeneficiario VARCHAR(255), IdDocumento VARCHAR(255), Serie VARCHAR(255),
+                  FolioDoc INT(20), MonedaDoc VARCHAR(255), MetodoPago VARCHAR(255),
+                  NumParcialidad INT(20), ImpSaldoInsolutoAnt DECIMAL(12,2), ImpPagado DECIMAL(12,2),
+                  ImpSaldoInsoluto DECIMAL(12,2), VersionTfd DECIMAL(2,1), UUID VARCHAR(255),
+                  FechaTimbrado DATETIME, RfcProveedorCert VARCHAR(13), SelloCFD TEXT(400),
+                  SelloSAT TEXT(400), NoCertificadoSAT INT(30), calleEmisor VARCHAR(255),
+                  numEmisor VARCHAR(255), edoEmisor VARCHAR(255), cpEmisor INT(20));
+
+INSERT INTO pago(TipoC, FechaEmision, Folio, Moneda, Total, LugarExpedicion, Sello, NoCertificado,
+Certificado, RFCemisor,NombreE, RegFiscalE, RFCreceptor, NombreR, UsoCFDI, ClaveProductoS, Cantidad,
+ClaveUnidad, Descripcion, ValorUnitario, Importe, Xmlns, Version, Localizacion, FechaPago, FormaPago,
+MonedaPago, Monto, NumOperacion, RfcEmisorCtaBen, CtaBeneficiario, IDdocumento, Serie, Folio,
+MonedaDoc, MetodoDoc, NumParcialidad, ImpSaldoInsolutoAnt, ImpPagado, ImpSaldoInsoluto,
+VersionTfd, UUID, FechaTimbrado, RfcProveedorCert, SelloCFD, SelloSAT, NoCertificadoSAT,
+calleEmisor, numEmisor, edoEmisor, cpEmisor)
+
+VALUES("$TipoC","$cfdiComprobante['Fecha']", "$cfdiComprobante['Folio']", "$cfdiComprobante['Moneda']",
+"$cfdiComprobante['Total']", "$cfdiComprobante['LugarExpedicion']", "$cfdiComprobante['Sello']",
+"$cfdiComprobante['NoCertificado']", "$cfdiComprobante['Certificado']","$RegimenFiscal", "$usoCfdi",
+"$concepts['ClaveProdServ']", "$concepts['Cantidad']","$concepts['ClaveUnidad']","$concepts['Descripcion']",
+"$concepts['ValorUnitario']","$concepts['Importe']","$pagoo['xmlns']", "$pagoo['Version']","$pagoo['xsi']",
+"$pago2['FechaPago']","$pago2['FormaDePagoP']","$pago2['MonedaP']","$pago2['Monto']",
+"$pago2['NumOperacion']","$pago2['RfcEmisorCtaBen']","$pago2['CtaBeneficiario']", "$doctrel['IdDocumento']",
+"$doctrel['Serie']", "$doctrel['Folio']", "$doctrel['MonedaDR']", "$doctrel['MetodoDePagoDR']",
+"$doctrel['NumParcialidad']","$doctrel['ImpSaldoAnt']","$doctrel['ImpPagado']", "$doctrel['ImpSaldoInsoluto']",
+"$tfd['Version']","$tfd['UUID']","$tfd['FechaTimbrado']","$tfd['RfcProvCertif']",
+"$tfd['SelloCFD']","$tfd['SelloSAT']","$tfd['NoCertificadoSAT']",
+"$addenda['CALLEEMI']","$addenda['NUMEMI']","$addenda['EDOEMI']","$addenda['CPEMI'])

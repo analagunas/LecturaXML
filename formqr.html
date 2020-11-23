@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Generador de c&oacute;digos QR</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Generador de c&oacute;digos</h1>
+          <form id="generador" action="" method="post">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="textqr">Ingrese el UUID de su factura</label>
+                <input type="text" class="form-control" id= "textqr" placeholder="Ingresa el UUID">
+              </div>
+                <button type="submit" class="btn btn-outline-dark">Generar QR</button>
+            </div>
+          </div>
+
+          <div class="col-md-2">
+            <div class="form-group">
+              <label for="textqr">Tama&nacute;o</label>
+              <select class="form-control" id="sizeqr">
+                <option value="100">100px</option>
+                <option value="200">200px</option>
+                <option value="300">300px</option>
+                <option value="400">400px</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="result">
+            </div>
+          </div>
+          </form>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+  $("#generador").submit(function(event){
+    var textqr=$("#textqr").val();
+    var sizeqr=$("#sizeqr").val();
+    parametros={"textqr":textqr, "sizeqr":sizeqr}
+  $.ajax({
+      type: "POST", 
+      url: "qr.php",
+      data: parametros,
+      success: function(datos){
+        $(".result").html(datos);
+      }
+  })
+  event.preventDefault();
+  }
+</script>
+</body>
+</html>
